@@ -189,8 +189,8 @@ docker push docker_hub_username/application-name
 # Docker Volumes:
 The data doesn't persist when container is not running. Docker has two options to persist data in the host machine.
 
-Volumes
-Managed by docker(/var/lib/docker/volumes/ on Linux)
+Volumes Managed by docker(/var/lib/docker/volumes/ on Linux)
+![Volume](images/volumes.png)
 
 Example of voume creation
 ```
