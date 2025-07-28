@@ -69,12 +69,13 @@ A Docker image is a file used to execute code in a Docker container. Docker imag
 # Docker-commands
 
 + List running container :
-```docker ps
+```
+docker ps
+
 ```
 + List all container even exited one :
 ```
 docker ps -a
-
 ```
 + Stop Container use Id/conatiner name :
 ```
