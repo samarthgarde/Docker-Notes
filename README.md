@@ -4,7 +4,7 @@ Virtualization allows multiple operating systems or environments to run on a sin
 
 ![Architecture](images/Virtualization.png)
 
-# Limitations of Traditional Virtualization
+# ⚠️  Limitations of Traditional Virtualization
 Each VM includes a full guest OS
 → Leads to large image sizes.
 
