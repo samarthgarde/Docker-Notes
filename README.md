@@ -1,4 +1,4 @@
-# Virtualization 
+# 🧱  Virtualization 
 
 Virtualization allows multiple operating systems or environments to run on a single physical machine by abstracting hardware resources.
 
