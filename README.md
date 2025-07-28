@@ -2,7 +2,7 @@
 
 Virtualization allows multiple operating systems or environments to run on a single physical machine by abstracting hardware resources.
 
-![Architecture](images/Virtual.jpeg)
+![Architecture](images/Architecture.jpeg)
 
 # Limitations of Traditional Virtualization
 Each VM includes a full guest OS
