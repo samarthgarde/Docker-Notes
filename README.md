@@ -55,7 +55,6 @@ By default only root user can execute docker commnads but if other users want pe
 Add the users into docker group: /etc/group/
 ```
 sudo usermod -aG docker user
-
 ```
 
 # Docker Hub
@@ -71,7 +70,6 @@ A Docker image is a file used to execute code in a Docker container. Docker imag
 + List running container :
 ```
 docker ps
-
 ```
 + List all container even exited one :
 ```
@@ -80,65 +78,82 @@ docker ps -a
 + Stop Container use Id/conatiner name :
 ```
 docker stop container name/container Id
-
 ```
-
 + List all docker Images :
-```docker images```
-
+```
+docker images
+```
 + Remove docker images :
-```docker rmi image-name```
-
+```
+docker rmi image-name
+```
 + Run Docker Image :
-```docker run image-name```
-
+```
+docker run image-name
+```
 + Run Docker Image and give name to it :
-```docker run --name myImage image-name```
-
+```
+docker run --name myImage image-name
+```
 + Run Docker Image and map it to host port:
-```docker run -p host-port:container-port image-name```
-
+```
+docker run -p host-port:container-port image-name
+```
 + Pull image from docker hub :
-```docker pull image-name```
-
+```
+docker pull image-name
+```
 + Execute command in docker container :
-```docker exec image-name cat /etc/os-release```
-
+```
+docker exec image-name cat /etc/os-release
+```
 + Run image in detach mode :
-```docker run -d image-name``` 
-
+```
+docker run -d image-name
+```
 + Run image in attach mode :
-```docker attach id```
-
+```
+docker attach id
+```
 + Run particular version of an image :
-```docker run image-name:tag```
-
+```
+docker run image-name:tag
+```
 + Run image in interactive mode :
-```docker run -i image-name```
-
+```
+docker run -i image-name
+```
 + Remove container :
-```docker rm container-id```
-
+```
+docker rm container-id
+```
 + Volume mapping :
-```docker run -v /opt/backup_dir:/var/lib/jenkins jenkins```
-
+```
+docker run -v /opt/backup_dir:/var/lib/jenkins jenkins
+```
 + Inspect container :
-```docker inspect container-name```
+```
+docker inspect container-name
+```
 
 # Docker Logs:
 
 you can check if container is nor running or there is some error.
 
 + Container logs :
-```docker logs container-name/container-id```
+```
+docker logs container-name/container-id
+```
 
 # Create your own image
 
-# We can create our image using Dockerfile
-# Define steps
-# Build image (docker build)
++ We can create our image using Dockerfile
++ Define steps
++ Build image (docker build)
 
-```Dockerfile build -t docker_hub_username/application-name```
+```
+Dockerfile build -t docker_hub_username/application-name
+```
 
 # Dockerfile Instructions
 
@@ -167,7 +182,9 @@ ARG - Define a variables that user can pass at build time
 ONBUILD - Adds to the image trigger instruction to be executed at a later time
 
 + Push Image
-```docker push docker_hub_username/application-name```
+```
+docker push docker_hub_username/application-name
+```
 
 # Docker Volumes:
 The data doesn't persist when container is not running. Docker has two options to persist data in the host machine.
@@ -176,8 +193,12 @@ Volumes
 Managed by docker(/var/lib/docker/volumes/ on Linux)
 
 Example of voume creation
-```docker volume create myContainerData```
-```docker run --name myWebService -d -p 8080:8080 -v myContainerData:/var/lib/image-name image-name:tag```
+```
+docker volume create myContainerData
+```
+```
+docker run --name myWebService -d -p 8080:8080 -v myContainerData:/var/lib/image-name image-name:tag
+```
 + Find your container data in /var/lib/docker/volumes/myContainerData/_data/
 
 Bind Mounts:
@@ -186,7 +207,9 @@ Stored anywhere in the host system.
 
 Example of bind mounts
 
-```docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag```
+```
+docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag
+```
 
 # Docker Compose
 
