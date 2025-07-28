@@ -2,7 +2,7 @@
 
 Virtualization allows multiple operating systems or environments to run on a single physical machine by abstracting hardware resources.
 
-![Architecture](images/virtual.jpeg)
+![Architecture](images/Virtual.jpeg)
 
 # Limitations of Traditional Virtualization
 Each VM includes a full guest OS
@@ -31,6 +31,10 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 ![ Docker architecture ](images/Architecture.jpg)
 
+# Containers
+
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers share the machine's OS system Kernel and therefore do not require an OS per application.
+
 # Why Docker?
 
 + Lightweight
@@ -45,6 +49,7 @@ Docker Engine is an open source containerization technology for building and con
 # Install Docker
 
 https://docs.docker.com/get-docker/
+
 By default only root user can execute docker commnads but if other users want permission to run docker commands.
 
 Add the users into docker group: /etc/group/
@@ -64,13 +69,20 @@ A Docker image is a file used to execute code in a Docker container. Docker imag
 # Docker-commands
 
 + List running container :
-```docker ps```
+```
+docker ps
 
+```
 + List all container even exited one :
-```docker ps -a```
+```
+docker ps -a
 
+```
 + Stop Container use Id/conatiner name :
-```docker stop container name/container Id```
+```
+docker stop container name/container Id
+
+```
 
 + List all docker Images :
 ```docker images```
