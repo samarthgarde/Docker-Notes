@@ -2,7 +2,7 @@
 
 Virtualization allows multiple operating systems or environments to run on a single physical machine by abstracting hardware resources.
 
-![Architecture](images/Architecture.jpeg)
+![Architecture](images/Virtualization.png)
 
 # Limitations of Traditional Virtualization
 Each VM includes a full guest OS
@@ -29,7 +29,7 @@ Docker is an open source containerization platform for building, deploying, and 
 # Docker Architecture 
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.
 
-![ Docker architecture ](images/Architecture.jpg)
+![ Docker architecture ](images/Docker.jpg)
 
 # Containers
 
@@ -69,9 +69,7 @@ A Docker image is a file used to execute code in a Docker container. Docker imag
 # Docker-commands
 
 + List running container :
-```
-docker ps
-
+```docker ps
 ```
 + List all container even exited one :
 ```
