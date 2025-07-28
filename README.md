@@ -157,29 +157,29 @@ Dockerfile build -t docker_hub_username/application-name
 
 # Dockerfile Instructions
 
-FROM - Take Base Image (Take from docker hub)
+**FROM** - Take Base Image (Take from docker hub)
 
-LABELS - Key value pairs, give project name or author name
+**LABELS** - Key value pairs, give project name or author name
 
-RUN - Execute commands
+**RUN** - Execute commands
 
-ADD/COPY - Add files and folders into image
+**ADD/COPY** - Add files and folders into image
 
-ENTRYPOINT - Allows you to configure a container that will run as an executable
+**ENTRYPOINT** - Allows you to configure a container that will run as an executable
 
-VOLUME - Creates a mount point and marks it as holding externally mounted volumes
+**VOLUME** - Creates a mount point and marks it as holding externally mounted volumes
 
-EXPOSE - Container listens on the specific network ports at runtime
+**EXPOSE** - Container listens on the specific network ports at runtime
 
-ENV - To set an environmemt variable
+**ENV** - To set an environmemt variable
 
-USER - Sets the username
+**USER** - Sets the username
 
-WORKDIR - Sets the working directory
+**WORKDIR** - Sets the working directory
 
-ARG - Define a variables that user can pass at build time
+**ARG** - Define a variables that user can pass at build time
 
-ONBUILD - Adds to the image trigger instruction to be executed at a later time
+**ONBUILD** - Adds to the image trigger instruction to be executed at a later time
 
 + Push Image
 ```
@@ -189,12 +189,12 @@ docker push docker_hub_username/application-name
 # Docker Volumes:
 The data doesn't persist when container is not running. Docker has two options to persist data in the host machine.
 
-Volumes 
+**Volumes**
 Managed by docker(/var/lib/docker/volumes/ on Linux)
 
 ![Volume](images/volumes.png)
 
-Example of voume creation
+**Example of voume creation**
 ```
 docker volume create myContainerData
 ```
@@ -203,11 +203,11 @@ docker run --name myWebService -d -p 8080:8080 -v myContainerData:/var/lib/image
 ```
 + Find your container data in /var/lib/docker/volumes/myContainerData/_data/
 
-Bind Mounts:
+**Bind Mounts:**
 
 Stored anywhere in the host system.
 
-Example of bind mounts
+**Example of bind mounts**
 
 ```
 docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag
