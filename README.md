@@ -4,7 +4,7 @@ Virtualization allows multiple operating systems or environments to run on a sin
 
 ![Architecture](images/Virtualization.png)
 
-# ⚠️  Limitations of Traditional Virtualization
+#LLimitations of virtualization
 Each VM includes a full guest OS
 → Leads to large image sizes.
 
@@ -14,7 +14,7 @@ Higher resource usage
 Slower startup time
 → Booting a full OS takes minutes.
 
-# ✅ This is where Docker comes into action
+# This is where Docker comes into action ✅ 
 Docker overcomes these limitations by using container-based virtualization:
 + No need for a full OS per application
 + Lightweight and faster
