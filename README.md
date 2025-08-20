@@ -4,7 +4,7 @@ Virtualization allows multiple operating systems or environments to run on a sin
 
 ![Architecture](images/Virtualization.png)
 
-#Limitations of virtualization
+# Limitations of virtualization
 Each VM includes a full guest OS
 → Leads to large image sizes.
 
@@ -31,8 +31,10 @@ Docker uses a client-server architecture. The Docker client talks to the Docker 
 
 ![ Docker architecture ](images/Docker.jpg)
 
-# Containers
+# Docker daemon
+The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.
 
+# Containers
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers share the machine's OS system Kernel and therefore do not require an OS per application.
 
 # Why Docker?
