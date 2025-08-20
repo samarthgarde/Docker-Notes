@@ -1,10 +1,10 @@
-# 🧱  Virtualization 
+## 🧱  Virtualization 
 
 Virtualization allows multiple operating systems or environments to run on a single physical machine by abstracting hardware resources.
 
 ![Architecture](images/Virtualization.png)
 
-# Limitations of virtualization
+## Limitations of virtualization
 Each VM includes a full guest OS
 → Leads to large image sizes.
 
@@ -14,30 +14,30 @@ Higher resource usage
 Slower startup time
 → Booting a full OS takes minutes.
 
-# This is where Docker comes into action ✅ 
+## This is where Docker comes into action ✅ 
 Docker overcomes these limitations by using container-based virtualization:
 + No need for a full OS per application
 + Lightweight and faster
 + Better resource efficiency
 
-# Virtual Machine 💻
+## Virtual Machine 💻
 A virtual machine (VM) is a virtual environment that functions as a virtual computer system with its own CPU, memory, network interface, and storage, created on a physical hardware system (located off- or on-premises).
 
-# Docker 🦈
+## Docker 🦈
 Docker is an open source containerization platform for building, deploying, and managing containerized applications. It enables to package applications into containers that encapsulate source code, libraries and dependencies required to run that code in any environment.
 
-# Docker Architecture 
+## Docker Architecture 
 Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.
 
 ![ Docker architecture ](images/Docker.jpg)
 
-# Docker daemon
+## Docker daemon
 The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.
 
-# Containers
+## Containers
 A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. Containers share the machine's OS system Kernel and therefore do not require an OS per application.
 
-# Why Docker?
+## Why Docker?
 
 + Lightweight
 + Isolation
@@ -45,10 +45,10 @@ A container is a standard unit of software that packages up code and all its dep
 + Performance
 + Portability
 
-# Docker Engine
+## Docker Engine
 Docker Engine is an open source containerization technology for building and containerizing your applications. Docker Engine acts as a client-server application.
 
-# Install Docker
+## Install Docker
 
 https://docs.docker.com/get-docker/
 
@@ -59,15 +59,15 @@ Add the users into docker group: /etc/group/
 sudo usermod -aG docker user
 ```
 
-# Docker Hub
+## Docker Hub
 Docker Hub is a service provided by Docker for finding and sharing container images with your team. It's world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.
 
 https://hub.docker.com/
 
-# Docker Image
+## Docker Image
 A Docker image is a file used to execute code in a Docker container. Docker images act as a set of instructions to build a Docker container, like a template. Docker images also act as the starting point when using Docker.
 
-# Docker-commands
+## Docker-commands
 
 + List running container :
 ```
@@ -138,7 +138,7 @@ docker run -v /opt/backup_dir:/var/lib/jenkins jenkins
 docker inspect container-name
 ```
 
-# Docker Logs:
+## Docker Logs:
 
 you can check if container is nor running or there is some error.
 
@@ -147,7 +147,7 @@ you can check if container is nor running or there is some error.
 docker logs container-name/container-id
 ```
 
-# Create your own image
+## Create your own image
 
 + We can create our image using Dockerfile
 + Define steps
@@ -157,7 +157,7 @@ docker logs container-name/container-id
 Dockerfile build -t docker_hub_username/application-name
 ```
 
-# Dockerfile Instructions
+## Dockerfile Instructions
 
 **FROM** - Take Base Image (Take from docker hub)
 
@@ -188,7 +188,7 @@ Dockerfile build -t docker_hub_username/application-name
 docker push docker_hub_username/application-name
 ```
 
-# Docker Volumes:
+## Docker Volumes:
 The data doesn't persist when container is not running. Docker has two options to persist data in the host machine.
 
 **Volumes**
@@ -215,6 +215,6 @@ Stored anywhere in the host system.
 docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag
 ```
 
-# Docker Compose
+## Docker Compose
 
 Docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
