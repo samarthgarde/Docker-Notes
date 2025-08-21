@@ -147,7 +147,7 @@ you can check if container is nor running or there is some error.
 docker logs container-name/container-id
 ```
 + Container logs live :
-  ```
+```
 docker logs container-name/container-id -f
 ```
 ## Create your own image
