@@ -137,6 +137,10 @@ docker run -v /opt/backup_dir:/var/lib/jenkins jenkins
 ```
 docker inspect container-name
 ```
++ Exec into the container
+```
+docker exec -it <container_id_or_name> /bin/bash
+```
 
 ## Docker Logs:
 
