@@ -221,6 +221,26 @@ Stored anywhere in the host system.
 ```
 docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag
 ```
+**Real Example:**
+
+Redis run with a bind mount
+
+```
+docker run -d --name=my-redis1 -p 6379:6379 -v redis_data:/data redis:latest --appendonly yes
+```
+**Exec into Redis container**
+
+```
+docker exec -it myredis redis-cli
+```
+```
+docker exec -it my-redis1 bash
+```
+**Then you can test:**
+```
+SET name "Samarth"
+GET name
+```
 
 ## Docker Compose
 
