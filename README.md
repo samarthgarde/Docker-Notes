@@ -27,7 +27,7 @@ A virtual machine (VM) is a virtual environment that functions as a virtual comp
 Docker is an open source containerization platform for building, deploying, and managing containerized applications. It enables to package applications into containers that encapsulate source code, libraries and dependencies required to run that code in any environment.
 
 # Docker Architecture 
-Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.
+Docker works on a simple client-server model where the Docker client is like a remote control that you use to give commands (docker run, docker build), and the Docker daemon (server) is the engine that does the real work of building images, running containers, and managing them. The client and daemon talk to each other using a REST API, either through UNIX sockets (if on the same machine) or over a network (if on different machines). On top of this, Docker Compose is another client tool that makes it easy to run applications made up of multiple containers together, using just one configuration file instead of starting each container manually.
 
 ![ Docker architecture ](images/Docker.jpg)
 
