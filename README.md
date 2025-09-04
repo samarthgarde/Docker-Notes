@@ -203,7 +203,7 @@ docker run --name myWebService -d -p 8080:8080 -v myContainerData:/var/lib/image
 ```
 + Find your container data in /var/lib/docker/volumes/myContainerData/_data/
 
-**Bind Mounts:**
+# Bind Mounts:
 
 Stored anywhere in the host system.
 
