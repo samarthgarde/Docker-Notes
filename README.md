@@ -212,7 +212,25 @@ Stored anywhere in the host system.
 ```
 docker run --name myWebService -d -p 8080:8080 -v /home/ubuntu/myContainerData:/var/lib/image-name image-name:tag
 ```
+# Docker Networking
 
+Docker networking is the system that allows Docker containers to communicate with each other, with the Docker host, and with the outside world.
+
+## Network Drivers
+Docker uses different network drivers to create and manage various types of networks.
+- **bridge (Default):** This is the default driver for standalone containers. It creates a private, internal network on the host.
+- **host:** This driver removes network isolation entirely. The container shares the host's network namespace.
+- **none:** This driver gives the container a network stack but attaches it to no network.
+- **overlay:** This driver is used for multi-host networking and is the preferred choice for Docker Swarm services.
+- **macvlan:** This advanced driver allows you to assign a MAC address to a container
+
+## How to use Docker networks
+- Creating networks- docker network create demo-network
+- Connecting containers to networks- docker run -d --name nginxapp nginx:alpine,  docker run -d --name mysqldb -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=testdb mysql:latest,  docker run -it --name boxbu busybox:latest.
+- Inspecting a Network- docker network inspect myappnet
+- Testing Container-to-Container Communication- docker exec -it <container name> sh
+- Connecting a Running Container to a Network- ping <container name> if the network is userdefined, ping <ip address> if the network is default bridge.
+  
 # Docker Compose
 
 Docker Compose is a tool that was developed to help define and share multi-container applications. With Compose, we can create a YAML file to define the services and with a single command, can spin everything up or tear it all down.
