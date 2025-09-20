@@ -228,7 +228,7 @@ Docker uses different network drivers to create and manage various types of netw
 - Creating networks- docker network create demo-network
 - Connecting containers to networks- docker run -d --name nginxapp nginx:alpine,  docker run -d --name mysqldb -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=testdb mysql:latest,  docker run -it --name boxbu busybox:latest.
 - Inspecting a Network- docker network inspect myappnet
-- Testing Container-to-Container Communication- docker exec -it <container name> sh
+- Testing Container-to-Container Communication- docker exec -it boxbu=<containername> sh
 - Connecting a Running Container to a Network- ping <container name> if the network is userdefined, ping <mysqlapp/nginxapp> if the network is default bridge.
   
 # Docker Compose
